@@ -14,7 +14,7 @@
     "main": "./source/extension.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/louoberto/fortify"
+        "url": "https://github.com/joerengara/fortify"
     },
     "activationEvents": [
         "onLanguage:fortran"
