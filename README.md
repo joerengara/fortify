@@ -87,7 +87,7 @@ To use Fortify, simply run the tool on your Fortran source files. The tool will 
 To install Fortify, clone the repository and run the setup script:
 
 ```sh
-git clone https://github.com/louoberto/fortify.git
+git clone https://github.com/joerengara/fortify.git
 cd fortify
 export PATH=$PATH:$(pwd)/source
 ```
