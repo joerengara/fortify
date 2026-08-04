@@ -19,7 +19,7 @@ jobs:
     - name: Checkout test suite repo
       uses: actions/checkout@v3
       with:
-        repository: louoberto/test
+        repository: joerengara/test
         token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         path: test
 
