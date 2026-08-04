@@ -3,7 +3,7 @@
     "displayName": "Fortify - Fortran Formatter",
     "description": "A powerful and simple Fortran formatting tool for Visual Studio Code.",
     "version": "1.2.10",
-    "publisher": "LouOberto",
+    "publisher": "JoeRengara",
     "engines": {
         "vscode": "^1.80.0"
     },
@@ -14,7 +14,7 @@
     "main": "./source/extension.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/louoberto/fortify"
+        "url": "https://github.com/joerengara/fortify"
     },
     "activationEvents": [
         "onLanguage:fortran"

@@ -56,8 +56,8 @@ def structured_indent(self, temp_line, current_line, ff_line, self_skip_true):
             # print(function)
             if re.search(rf'^\s*\d{{0,5}}\s*end\s*{re.escape(function)}\b', temp_lower):
                 continue
-            pattern = rf'^\s*\d{{0,5}}\s*(?:[a-z0-9_]+(?:\*[\w\d]+|\([^()]*\)|\([^()]*\([^()]*\)[^()]*\))?\s+){{0,5}}{re.escape(function)}\b(?!\s*\()'
-            pattern2 = rf'^\s*\d{{0,5}}\s*[a-zA-Z_][a-zA-Z0-9_]*\*\(\*\)\s+{re.escape(function)}\b(?!\s*\()'
+            pattern = rf'^\s*\d{{0,5}}\s*(?:[a-z0-9_]+(?:\*[\w\d]+|\([^()]*\)|\([^()]*\([^()]*\)[^()]*\))?\s+){{0,5}}{re.escape(function)}\b(?=\s+[a-zA-Z_]\w*)'
+            pattern2 = rf'^\s*\d{{0,5}}\s*[a-zA-Z_][a-zA-Z0-9_]*\*\(\*\)\s+{re.escape(function)}\b(?=\s+[a-zA-Z_]\w*)'
             if re.match(pattern, temp_lower) or re.match(pattern2, temp_lower):
                 if temp and re.match(pattern, temp) or re.match(pattern2, temp):
                     keyword_match = False
@@ -339,7 +339,7 @@ def structured_indent(self, temp_line, current_line, ff_line, self_skip_true):
             else:
                 # print(keyword, self.indenter, repr(temp_line))
                 self.skip = False
-        elif re.search(rf"\b{re.escape('type')}(?:\s*\*\w+|\s*\(\w+\))?\s*function\b", temp_lower):
+        elif re.search(rf"\b{re.escape('type')}(?:\s*\*\w+|\s*\(\w+\))?\s*function\b(?=\s+[a-zA-Z_]\w*)", temp_lower):
             # print(keyword, self.skip, self.indenter, repr(temp_line))
             self.indenter += 1
             self.skip = True

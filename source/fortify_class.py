@@ -67,7 +67,7 @@ class fortify_class:
         self.iftypes2 = ['.eq.', '.ge.', '.gt.', '.le.', '.lt.', '.ne.', '.or.']
 
         # Formatting functions
-        self.read_file = read_file  # Read and stoe the file_lines of the file to format
+        self.read_file = read_file  # Read and store the file_lines of the file to format
         self.print_file = print_file
         self.format = format
         self.code_line = ''
